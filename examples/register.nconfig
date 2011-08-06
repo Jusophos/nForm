@@ -1,0 +1,55 @@
+firstname:
+    label: Vorname
+    title: Bitte geben Sie Ihren Vornamen an.
+    flags: required
+	type: name
+	datatype: string
+	maxlength: 250
+	minlength: 5
+
+lastname:    
+    label: Nachname
+    title: Bitte geben Sie Ihren Nachnamen an.
+    flags: required
+    type: name
+    datatype: string
+    maxlength: 250
+    minlength: 5
+    match_regex: null
+    
+password:
+    label: Passwort
+    title: Bitte geben Sie ein Passwort an.
+    type: password
+    security_level: high
+    flags: required,hash
+    require_confirmation: password_re
+    
+password_re:
+    label: Passwort wiederholen
+    title: Bitte geben Sie Ihr Passwort ein zweites Mal ein, um Fehler zu vermeiden.
+    type: password
+    flags: no_db,required
+    
+mail:
+    label: E-Mail
+    title: Bitte geben Sie eine E-Mail an.
+    flags: required
+    type: mail
+    
+comment:
+    label: Kommentar
+    title: Füllen Sie einen Kommentar aus.
+    type: plaintext
+    
+
+
+global:
+    class_prefix: nFormClass_
+	id: nForm_
+	required_symbol: *
+	flags: use_tabindex
+    
+    error_length: $field muss mindestens $length Zeichen betragen
+    error_required: $field muss ausgefüllt werden.
+    error_format: $field muss korrekt angegeben werden.
